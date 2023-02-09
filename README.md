@@ -1,4 +1,3 @@
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-K3yL0G.py README-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 # K3yL0G.py 
 - Records user application activity, and the user's keystrokes corresponding to that application.
 - This program will record sensitive data such as passwords, emails, phone numbers. EVERYTHING that the user types is stored in the logs.txt file, or emailed to the administer of 'K3yL0G.py'.
