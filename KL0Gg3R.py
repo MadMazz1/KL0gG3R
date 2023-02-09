@@ -23,7 +23,7 @@ SOFTWARE.
 """
 '''
 TODO: 
-Finish send_logs(): Sends logs to specified email instead of storing on disk. GMAIL API was being a bitch....I'll return to this in a few days with a clear head
+Finish send_logs(): Sends logs to specified email instead of storing on disk. GMAIL API was being a bitch...
 '''
 '''=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-K3yL0G.py README-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 # K3yL0G.py records user application activity, and the user's keystrokes corresponding to that application.
