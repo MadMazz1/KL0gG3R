@@ -14,5 +14,5 @@
 
 
 # TODO:
-- Finish send_logs() function. 
-    -Emails the file to email address. Google API is a bitch right now.
+- Finish send_logs() function. [Current WIP] 
+- Created sender/receiver functions which will send/receive logs.txt file over encrypted FTP socket. [FINISHED]
