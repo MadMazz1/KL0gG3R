@@ -24,7 +24,7 @@ def send_file(file: str):
         try:
             # Sends the encrypted data to specified address/port
             client.send(file.encode())
-            client.send(str(file_size).encode())
+            client.send(str(file_size).encode('utf-8'))
             client.sendall(encrypted)
             client.send(b"<END>")
             print("File(s) Sent!")

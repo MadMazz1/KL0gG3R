@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c7bfdb3-d20b-426d-a122-f2ea62b76e55" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KL0Gg3R.py" beforeDir="false" afterPath="$PROJECT_DIR$/KL0Gg3R.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sender.py" beforeDir="false" afterPath="$PROJECT_DIR$/sender.py" afterDir="false" />
-    </list>
+    <list default="true" id="1c7bfdb3-d20b-426d-a122-f2ea62b76e55" name="Changes" comment="# 'sender' creates an encrypted ftp socket which will send 'Logs.txt' back to the 'receiver'. &#10;&#10;# This seemed like a cooler alternative to Email. &#10;&#10;# Still working out a few kinks." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,6 +79,37 @@
       <option name="presentableId" value="Default" />
       <updated>1678565875909</updated>
     </task>
+    <task id="LOCAL-00001" summary="# 'sender' creates an encrypted ftp socket which will send 'Logs.txt' back to the 'receiver'.&#10;&#10;# Still working out a few kinks.">
+      <created>1678571239601</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678571239601</updated>
+    </task>
+    <task id="LOCAL-00002" summary="# 'sender' creates an encrypted ftp socket which will send 'Logs.txt' back to the 'receiver'. &#10;&#10;# This seemed like a cooler alternative to Email. &#10;&#10;# Still working out a few kinks.">
+      <created>1678571286288</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678571286288</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="# 'sender' creates an encrypted ftp socket which will send 'Logs.txt' back to the 'receiver'.&#10;&#10;# Still working out a few kinks." />
+    <MESSAGE value="# 'sender' creates an encrypted ftp socket which will send 'Logs.txt' back to the 'receiver'. &#10;&#10;# This seemed like a cooler alternative to Email. &#10;&#10;# Still working out a few kinks." />
+    <option name="LAST_COMMIT_MESSAGE" value="# 'sender' creates an encrypted ftp socket which will send 'Logs.txt' back to the 'receiver'. &#10;&#10;# This seemed like a cooler alternative to Email. &#10;&#10;# Still working out a few kinks." />
   </component>
 </project>

