@@ -14,11 +14,6 @@
 
 
 # TODO:
-<<<<<<< HEAD
 - Finish send_logs() function.
   - <s>-Emails the file to email address. Google API is a bitch right now.</s>[SCRATCHED]
-  - Uses socket to send file via encrypted FTP socket. [WIP] [Almost complete]
-=======
-- Finish send_logs() function. [Current WIP] 
-- Created sender/receiver functions which will send/receive logs.txt file over encrypted FTP socket. [FINISHED]
->>>>>>> d06902ada8c4fb2d11ebea99459b086a8a9ff27d
+  - Use socket lib to send file via encrypted FTP socket. [WIP] [Almost complete]
